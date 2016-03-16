@@ -58,3 +58,8 @@ h1 {
 .dropdown-menu {
 	box-shadow: 2px 2px 1px 1px rgba(50, 50, 50, 0.75);
 }
+
+#sidebar {
+	border: solid red;
+	padding-left: 0px;
+}

@@ -17,7 +17,7 @@
 
        </head>
    
-   <body>
+   <body id="body-all">
   <div class="header container-fluid"><h1>Blog</h1></div>      
 
       
@@ -39,17 +39,6 @@
       <ul class="nav navbar-nav navbar-right">
       
         <li><a href="blog-main.html">Blog</a></li>
-
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
-
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="tv-main.html">Television Recaps</a></li>
-          <li class="divider"></li>
-          <li><a href="trivia-main.html">Trivial Pursuit</a></li>
-          <li class="divider"></li>
-          <li><a href="thoughts-main.html">Thoughts</a></li>
-        </ul>
-        </li>
         
         <li><a href="projects-main.html">Projects</a></li>
         <li><a href="about-main.html">About Me</a></li>
@@ -60,9 +49,21 @@
   </div>
 </nav>
 
-    <img src="https://sugarchalet.files.wordpress.com/2012/11/blog-background.jpg" class="img responsive img-rounded" id="background-img" />
+<div class="container">
+  <div class="row">
+    <div class="col-md-1" role="navigation" id="sidebar">
+      <ul class="nav">
+        <li><a href="about-main.html">About Me</a></li>
+        <li><a href="trivia-main.html">Trivial Pursuits</a></li>
+        <li><a href="tv-main">TV Recaps</a></li>
+      </ul>
+    </div>
 
-
+    <div class="col-md-11">
+    <p>this should contain rolling blog content</p>
+    </div>
+  </div>
+</div>
 
    </body>
 </html>
