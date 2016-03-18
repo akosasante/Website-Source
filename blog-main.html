@@ -17,14 +17,17 @@
 
        </head>
    
-   <body id="body-all">
-  <div class="header container-fluid"><h1>Blog</h1></div>      
-
+   <body>
+  <div id="body-all" class="container-fluid">
+  
+  <div class="row">
+  <div class="header container-fluid col-md-12"><h1>Blog</h1></div>
+  </div>
       
       
-      
+  <div class="row">   
   <nav class="navbar navbar-default navbar-static-top">
-  <div class="container-fluid">
+  <div class="container-fluid col-md-12">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -48,22 +51,22 @@
 
   </div>
 </nav>
+</div>
 
-<div class="container">
-  <div class="row">
+<div class="row">
     <div class="col-md-1" role="navigation" id="sidebar">
       <ul class="nav">
-        <li><a href="about-main.html">About Me</a></li>
+        <li><a href="thoughts-main.html">Thoughts</a></li>
         <li><a href="trivia-main.html">Trivial Pursuits</a></li>
         <li><a href="tv-main">TV Recaps</a></li>
       </ul>
     </div>
 
-    <div class="col-md-11">
+    <div class="col-md-11" id="blog-content">
     <p>this should contain rolling blog content</p>
     </div>
-  </div>
-</div>
 
+</div>
+    </div>
    </body>
 </html>
