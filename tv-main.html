@@ -12,19 +12,22 @@
       <script src = "js/bootstrap.min.js"></script>
       
       <title>Bootstrap 101 Template</title> 
-      <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-OiWEn8WwtH+084y4yW2YhhH6z/qTSecHZuk/eiWtnvLtU+Z8lpDsmhOKkex6YARr" crossorigin="anonymous">
+      <link href="css/bootstrap.css" rel="stylesheet">
       <link href="css/mycss.css" rel="stylesheet">
 
        </head>
    
-   <body id="body-all">
-      <div class="header container-fluid"><h1>TV Recaps</h1></div>      
-
+   <body>
+  <div id="body-all" class="container-fluid">
+  
+  <div class="row">
+  <div class="header container-fluid col-md-12"><h1>TV Recaps</h1></div>
+  </div>
       
       
-      
+  <div class="row">   
   <nav class="navbar navbar-default navbar-static-top">
-  <div class="container-fluid">
+  <div class="container-fluid col-md-12">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -39,17 +42,6 @@
       <ul class="nav navbar-nav navbar-right">
       
         <li><a href="blog-main.html">Blog</a></li>
-
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
-
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="tv-main.html">Television Recaps</a></li>
-          <li class="divider"></li>
-          <li><a href="trivia-main.html">Trivial Pursuit</a></li>
-          <li class="divider"></li>
-          <li><a href="thoughts-main.html">Thoughts</a></li>
-        </ul>
-        </li>
         
         <li><a href="projects-main.html">Projects</a></li>
         <li><a href="about-main.html">About Me</a></li>
@@ -59,7 +51,28 @@
 
   </div>
 </nav>
+</div>
 
+<div class="row">
+    <div class="col-md-1" role="navigation" id="sidebar">
+      <ul class="nav">
+        <li><a href="thoughts-main.html">Thoughts</a></li>
+        <li><a href="trivia-main.html">Trivial Pursuits</a></li>
+        <li id="active"><a href="tv-main.html">TV Recaps</a></li>
+      </ul>
+    </div>
 
+<div class="col-md-1"></div>
+    <div class="col-md-9 text-center" id="blog-content">
+        
+        <section class="blog-item">
+            <p>this should contain rolling blog content</p>
+            <p>this should contain rolling blog content</p>
+        </section>
+    </div>
+<div class="col-md-1"></div>
+
+</div>
+    </div>
    </body>
 </html>
