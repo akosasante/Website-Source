@@ -63,7 +63,8 @@
 .caret-down {
   margin-top: 5px;
   margin-right: -10px;
-  content: " ";
+ /* content: " ";*/
+content: "aa";
   border: 5px solid transparent;
   display: inline-block;
   width: 0;
