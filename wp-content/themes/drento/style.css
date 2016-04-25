@@ -298,7 +298,7 @@ i {
 
 blockquote {
 	display: block;
-    padding: 1.5em 1.5em 1.5em 3.5em;
+    padding: 2em 2em 2em 3.5em;
     margin: 0 0 1.5em;
     position: relative;
     border-left: 4px solid #e2ae69;
@@ -621,12 +621,12 @@ a:active {
   padding-top: 12px;
 }
 
-.main-navigation li a:not(:last-child):after {
+/*.main-navigation li a:not(:last-child):after {
 	content: "\f107";
 	font-family: FontAwesome;
 	margin: 0 0 0 5px;
 	font-size: 10px;
-}
+}*/
 .main-navigation ul ul li a:not(:last-child):after {
 	content: "\f105";
 	margin: 0 0 0 5px;
@@ -1176,7 +1176,7 @@ header.site-header {
 .main-sidebar-box {
 	position: fixed;
     z-index: 999;
-    top: 2.5em;
+    top: 5em;
     right: 2.5em;
     width: 33px;
     height: 23px;
@@ -2179,4 +2179,55 @@ object {
 	.post-navigation a .post-title {
 		font-size: 1em;
 	}
+}
+
+.home .entry-title {
+	display: none;
+}
+
+.home .drentoSpace {
+	display: none;
+}
+
+.home .entry-content {
+	box-shadow: 2em 2em;
+	border: solid black;
+	padding: 1em 1em 0.5em 1em;
+}
+
+#site-navigation > div:nth-child(3) {
+	display: none;
+}
+
+.site-title a:hover {
+	text-decoration: none;
+}
+
+.site-title {
+	padding-top: 0.5em;
+}
+
+#site-navigation {
+	margin-top: 1em;
+}
+
+#masthead {
+	margin-bottom: 2em;
+	padding-bottom: 10px;
+}
+
+a.navbar-brand:nth-child(1) {
+	padding-top: 1em;
+}
+
+.single .category-link {
+    display: none;
+}
+
+.category .category-link {
+    display: none;
+}
+
+.entry-content > blockquote {
+	padding: 1.5em;
 }

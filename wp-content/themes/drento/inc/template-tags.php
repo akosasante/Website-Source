@@ -23,18 +23,30 @@ function drento_posted_on() {
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
 	);
-
+    $arc_year = get_the_time('Y');
+    $arc_month = get_the_time('m');
+    $arc_day = get_the_time('d');
+    
 	$posted_on = sprintf(
 		esc_html_x( 'Posted on %s', 'post date', 'drento' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<a href="' . esc_url( get_day_link($arc_year, $arc_month, $arc_day) ) . '" rel="bookmark">' . $time_string . ' </a>'
 	);
+    
+    $post_id = get_the_ID();
+    $category_object = get_the_category($post_id);
+    $category_name = $category_object[0]->name;
+    $cat_url = $category_object[0]->cat_ID;
+    $category_link = sprintf(
+            esc_html_x( ' in %s', 'post category', 'drento' ),
+            '<a href="' .get_category_link($cat_url) .  '" rel="bookmark">' . $category_name . '</a>'
+            );
 
 	$byline = sprintf(
 		esc_html_x( 'by %s', 'post author', 'drento' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on"><i class="fa fa-clock-o spaceRight"></i>' . $posted_on . '</span><span class="byline"><i class="fa fa-user spaceLeftRight"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on"><i class="fa fa-clock-o spaceRight"></i>' . $posted_on . '</span>'  . '<span class="category-link">' . $category_link . '</span>'  .'<span class="byline"><i class="fa fa-user spaceLeftRight"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
 	
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link"><i class="fa fa-comments-o spaceLeftRight"></i>';
