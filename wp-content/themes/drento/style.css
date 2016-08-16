@@ -621,12 +621,12 @@ a:active {
   padding-top: 12px;
 }
 
-/*.main-navigation li a:not(:last-child):after {
-	content: "\f107";
+.main-navigation li a:not(:last-child):after {
+	/*content: "\f107";*/
 	font-family: FontAwesome;
 	margin: 0 0 0 5px;
 	font-size: 10px;
-}*/
+}
 .main-navigation ul ul li a:not(:last-child):after {
 	content: "\f105";
 	margin: 0 0 0 5px;
